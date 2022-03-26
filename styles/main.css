@@ -9,6 +9,23 @@
 .container {
   height: 100vh;
   width: 100vw;
+  text-align: center;
+}
+
+.container .instructions {
+  margin: auto;
+  font-size: x-large;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.container .maze_container {
+  height: 95%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,7 +37,7 @@
           align-items: center;
 }
 
-.container #maze {
+.container .maze_container #maze {
   height: 80%;
   width: 60%;
   -webkit-box-align: center;
@@ -28,7 +45,7 @@
           align-items: center;
 }
 
-.container #maze .row {
+.container .maze_container #maze .row {
   height: 10%;
   width: 100%;
   display: -webkit-box;
@@ -36,7 +53,7 @@
   display: flex;
 }
 
-.container #maze .row .box {
+.container .maze_container #maze .row .box {
   background-color: white;
   border-radius: 2px;
   height: 100%;
@@ -48,7 +65,7 @@
   transition: transform 0.2s, background-color 0.2s, -webkit-transform 0.2s;
 }
 
-.container #maze .row .box:hover {
+.container .maze_container #maze .row .box:hover {
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
   background-color: #b9fff9;

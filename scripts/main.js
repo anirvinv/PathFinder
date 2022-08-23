@@ -1,6 +1,12 @@
 import { dfs } from "./depthFirst.js";
+import { bfs } from "./breadthFirst.js";
 import { makeList } from "./makeList.js";
+import { dijkstra } from "./dijkstra.js";
 document.addEventListener("DOMContentLoaded", () => {
+	var button = document.querySelector("#reset");
+	button.addEventListener("click", () => {
+		location.reload();
+	});
 	var body = document.querySelector("body");
 	var boxDivs = body.querySelectorAll(".box");
 	var boxes = [undefined];
@@ -57,6 +63,12 @@ document.addEventListener("DOMContentLoaded", () => {
 		var adjList = makeList(walls);
 		if (event.key == "d") {
 			dfs(adjList, boxes);
+		}
+		if (event.key == "b") {
+			bfs(adjList, boxes);
+		}
+		if (event.key == "s") {
+			dijkstra(adjList, boxes);
 		}
 	});
 });
